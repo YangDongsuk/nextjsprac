@@ -1,5 +1,6 @@
 import { Hello } from "./data";
 export default function Cart() {
+  let btncolor = "blue";
   return (
     <div>
       <h4 className="title">Cart</h4>
@@ -7,6 +8,7 @@ export default function Cart() {
       <CartItem />
       <CartItem />
       <CartItem />
+      <RedBtn btncolor={btncolor} />
     </div>
   );
 }
@@ -19,4 +21,8 @@ function CartItem() {
       <p>1개</p>
     </div>
   );
+}
+
+function RedBtn(props) {
+  return <button style={{ color: props.btncolor }}>redBtn</button>;
 }
